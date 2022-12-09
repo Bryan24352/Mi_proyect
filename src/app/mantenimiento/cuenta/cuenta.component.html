@@ -1,0 +1,32 @@
+<div nz-row nzJustify="center" nzAlign="middle">
+    <div nz-col nzSpan="24" nzJustify="center">
+        <h1>Cuentas</h1>
+    </div>
+</div>
+<hr>
+<div nz-row>
+    <div nz-col nzSpan="24">
+        <nz-table #basicTable [nzData]="cuenta">
+            <thead>
+                <tr>
+                    <th>Lista Empleado</th>
+                    <th>Id del empleado</th>
+                    <th>id</th>
+                    <th>Nombre</th>
+                    <th>Tipo</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let data of basicTable.data; let i=index">
+                    <td>{{i+1}}</td>
+                    <td>{{data.empleadoId}}</td>
+                    <td>{{data.id}}</td>
+                    <td>{{data.nombre}}</td>
+                    <td>{{data.tipo}}</td>
+                    <td>
+                    </td>
+                </tr>
+            </tbody>
+        </nz-table>
+    </div>
+</div>
